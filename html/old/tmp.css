@@ -1,0 +1,71 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 100%;
+  background-color:black;
+}
+
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 2.5em;
+  margin:0px
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 1.875em;
+  margin:0px
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: 0.875em;
+}
+
+li.nav {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #333;
+}
+
+li a:hover {
+  background-color: #111;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  color:white;
+  background-color:black
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

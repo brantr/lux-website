@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="lux.css">
+</head>
+<body>
+  <div>
+    <img src="lux_top_bar.png">
+  </div>
+  <ul>
+    <li><a href="index.html"><h4>Home</h4></a></li>
+    <li><a href="#news"><h4>News</h4></a></li>
+    <li class="dropdown">
+      <a href="policies.html" class="dropbtn"><h4>Policies</h4></a>
+      <div class="dropdown-content">
+        <a href="#acknowledgements">Acknowledgements</a>
+        <a href="#scheduler-and-queues">Queues</a>
+        <a href="#storage-and-quotas">Storage</a>
+        <a href="#software-and-libraries">Software</a>
+        <a href="#frontend-system-usage">Frontend</a>
+        <a href="#policy-violations">Violations</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="project.html" class="dropbtn"><h4>Project</h4></a>
+      <div class="dropdown-content">
+        <a href="#">Project Team</a>
+        <a href="#">Thank Yous</a>
+        <a href="#">In Memoriam</a>
+      </div>
+    </li>
+  </ul>
+  <br>
+  <h3>User policies for the lux system</h3>
+  <p>Thanks for becoming a user of the lux system at UCSC. Below, we highlight the user policies for the system. Anyone using the lux cluster assents to these policies as a condition of access to the lux cluster. For questions, please email <a href="Brant%20Robertson">mailto:brant@ucsc.edu</a>.</p>
+
+  <h4 id="acknowledgements">Acknowledgements</h4>
+  <p>All </p>
+  <h4 id="scheduler-and-queues">Scheduler and Queues</h4>
+  <p>Users are expected to submit jobs and access nodes through the provided Slurm queues. </p>
+  <h4 id="storage-and-quotas">Storage and Quotas</h4>
+  
+  <h4 id="software-and-libraries">Software and Libraries</h4>
+  <p>The usage of lux is shared among many disciplines, and this breadth makes the detailed management of the system challenging. Software from many different disciplines requires a large range of libraries and packages, and the maintenance of these</p>
+
+  <h4 id="frontend-system-usage">Frontend system usage</h4>
+  <p>The lux system frontend servers (lux-0, lux-1, lux-2) are designed to support users of the cluster in its intended usage mode (i.e., distributed jobs running on the nodes). Any computationally or memory intensive job should not be run on the frontend, and instead should be executed on a node allocated via the Slurm scheduler. This policy especially includes the execution of python scripts, including simulation post processing and plotting – these are tasks that should be run on the nodes. Any job running on the frontend can be terminated without notice to the user.</p>
+
+  <p>Computational tasks explicitly permitted on the frontend system are text/code editing, compilation, data transfer, and job monitoring. If you have a question about how to use the lux frontend systems, please email <a href="Brant%20Robertson">mailto:brant@ucsc.edu</a>.</p>
+
+  <h4 id="policy-violations">Policy Violations</h4>
+</body>
+</html>
