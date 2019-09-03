@@ -1,14 +1,14 @@
 .. _getting_started:
 
 
-***************
-Getting started
-***************
+*******************************
+Getting Started
+*******************************
 
-.. _installing-docdir:
+.. _getting_an_account:
 
-Installing your doc directory
-=============================
+Getting an account on lux.ucsc.edu
+==================================
 
 You may already have sphinx `sphinx <http://sphinx.pocoo.org/>`_
 installed -- you can check by doing::
@@ -100,7 +100,7 @@ with::
      _static/basic_screenshot.png
 
 
-Next we'll customize the look and feel of our site to give it a logo,
-some custom css, and update the navigation panels to look more like
-the `sphinx <http://sphinx.pocoo.org/>`_ site itself -- see
-:ref:`custom_look`.
+..Next we'll customize the look and feel of our site to give it a logo,
+..some custom css, and update the navigation panels to look more like
+..the `sphinx <http://sphinx.pocoo.org/>`_ site itself -- see
+..:ref:`custom_look`.
