@@ -10,6 +10,8 @@ Welcome to lux.ucsc.edu's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   getting_started.rst
+
 
 
 Indices and tables
