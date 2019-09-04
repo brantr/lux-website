@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to lux.ucsc.edu's documentation!
+*lux.ucsc.edu* Documentation
 ========================================
 
 About
@@ -11,12 +11,10 @@ About
 
 The NSF-funded lux supercomputer at UC Santa Cruz will enable computational research in astrophysics in galaxy formation, cosmological structure formation, exoplanet formation and atmospheres, astrophysical transients and gravitational wave sources, and convective and turbulent processes in stellar interiors. Broad computational research at UCSC in planetary science, applied mathematics, chemistry, and materials science will also be performed on the system.
 
-Contents
---------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Pages:
+   :caption: Contents:
 
    getting_started.rst
    policies.rst

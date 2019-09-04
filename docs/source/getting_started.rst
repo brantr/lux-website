@@ -1,3 +1,4 @@
+
 .. _getting_started:
 
 
@@ -6,6 +7,11 @@ Getting Started
 *******************************
 
 .. _getting_an_account:
+
+Read the User Policies
+==================================
+
+First things first -- please read the policies_.
 
 Getting an account on lux.ucsc.edu
 ==================================
