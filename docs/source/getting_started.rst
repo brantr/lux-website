@@ -1,4 +1,4 @@
-
+.. _policies: ../html/policies.html
 .. _getting_started:
 
 

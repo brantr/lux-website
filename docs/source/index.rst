@@ -17,6 +17,7 @@ The NSF-funded lux supercomputer at UC Santa Cruz will enable computational rese
    :caption: Contents:
 
    getting_started.rst
+   system.rst
    policies.rst
    project.rst
 
