@@ -1,3 +1,5 @@
+.. _getting_started: ../html/getting_started.html
+.. _using_lux: ../html/using_lux.html
 .. _system:
 
 
@@ -5,11 +7,13 @@
 *lux* System Configuration
 *******************************
 
-Compute System Information
+Compute System Overview
 --------------------------
 
 The *lux* system is based on 3 login servers (*lux-0*, *lux-1*, and *lux-2*)
 and 108 Dell compute nodes. The compute nodes each have 2x 20-core Intel Xeon Gold 6248 (Cascade Lake) CPUs, 192GB RAM, 2.4TB SSD local scratch space, and 100 GB/s Mellanox HDR non-blocking Infiniband networking. There are 80 CPU-only nodes (*node001*-*node080*) and 28 GPU-enabled nodes (*gpu001*-*gpu028*) that have 2x NVIDIA 32GB V100 GPUs.
+
+Instructions for getting access and using the system are available on the `Getting Started <getting_started_>`_ and using_lux_ pages.
 
 
 Facilities Statement for Grants
