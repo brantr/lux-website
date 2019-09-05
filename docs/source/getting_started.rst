@@ -1,7 +1,7 @@
-.. _policies: ../html/policies.html
-.. _using_lux: ../html/using_lux.html
-.. _project_team: ../html/project.html#project_team
-.. _acknowledgments: ../html/policies.html#acknowledgments
+.. _policies: policies.html
+.. _using_lux: using_lux.html
+.. _project_team: project.html#project_team
+.. _acknowledgments: policies.html#acknowledgments
 .. _email_brant: brant@ucsc.edu
 
 .. _getting_started:
