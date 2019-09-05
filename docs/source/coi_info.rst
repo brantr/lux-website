@@ -1,7 +1,7 @@
 .. _email_brant: brant@ucsc.edu
-.. _getting_started: ../html/getting_started.html
-.. _using_lux: ../html/using_lux.html
-.. _sundry_accounts: ../html/getting_started.html#external_collaborators
+.. _getting_started: getting_started.html
+.. _using_lux: using_lux.html
+.. _sundry_accounts: getting_started.html#external_collaborators
 
 .. _coi_info:
 

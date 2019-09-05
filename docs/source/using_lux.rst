@@ -1,5 +1,5 @@
 .. _email_brant: brant@ucsc.edu
-.. _connecting_to_lux: ../html/getting_started.html#connecting_to_lux
+.. _connecting_to_lux: getting_started.html#connecting_to_lux
 .. _using_lux:
 
 

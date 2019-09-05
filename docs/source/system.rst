@@ -1,5 +1,5 @@
-.. _getting_started: ../html/getting_started.html
-.. _using_lux: ../html/using_lux.html
+.. _getting_started: getting_started.html
+.. _using_lux: using_lux.html
 .. _system:
 
 
