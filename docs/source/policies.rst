@@ -46,7 +46,7 @@ Software and Libraries
 
 The usage of lux is shared among many disciplines, and this breadth makes the detailed management of the system challenging. Software from many different disciplines requires a large range of libraries and packages, and the maintenance of all such libraries may be unmanageable. Widely-used libraries may be installed as system modules for use by multiple users. Research or custom-built software will need to be installed and maintained by their users.
 
-Frontend system usage
+Login Node Usage
 ---------------------
 
 The *lux* system frontend servers (*lux-0*, *lux-1*, *lux-2*) are designed to support users of the cluster in its intended usage mode (i.e., distributed jobs running on the nodes). Any computationally or memory intensive job should not be run on the frontend, and instead should be executed on a node allocated via the Slurm scheduler. This policy especially includes the execution of python scripts, including simulation post processing and plotting – these are tasks that should be run on the nodes. Any job running on the frontend can be terminated without notice to the user.
