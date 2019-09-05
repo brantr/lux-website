@@ -12,22 +12,22 @@ Policies
 Overview
 --------
 
-Thanks for becoming a user of the lux system at UCSC. Below, we highlight the user policies for the system. Anyone using the lux cluster assents to these policies as a condition of access to the lux cluster. For questions, please email `Brant Robertson <email_brant_>`_.
+Thanks for becoming a user of the *lux* system at UCSC. Below, we highlight the user policies for the system. Anyone using the *lux* cluster assents to these policies as a condition of access to the *lux* cluster. For questions, please email `Brant Robertson <email_brant_>`_.
 
-.. _acknowledgements:
+.. _acknowledgments:
 
-Acknowledgements
+Acknowledgments
 ----------------
 
-All users of *lux* must include the following acknowledgement in any publication resulting or benefitting from usage of the system:
+All users of *lux* must include the following acknowledgment in any publication resulting or benefitting from usage of the system:
 
 	**We acknowledge use of the lux supercomputer at UC Santa Cruz, funded by NSF MRI grant AST 1828315.**
 
-Including this funding statement is critical, and users and any related Co-I are responsible for adding this acknowledgement. Failure to include this statement in publications that used *lux* will be considered a `policy violation <policy_violations_>`_.
+Including this funding statement is critical, and users and any related Co-I are responsible for adding this acknowledgment. Failure to include this statement in publications that used *lux* will be considered a `policy violation <policy_violations_>`_.
 
 Notification of Publications
 ----------------------------
-Please let `Brant Robertson <email_brant_>`_ know about any publications arising or benefitting from your access to *lux* (and please include the `acknowledgements <acknowledgements_>`_ in the published version!).
+Please let `Brant Robertson <email_brant_>`_ know about any publications arising or benefitting from your access to *lux* (and please include the `acknowledgments <acknowledgments_>`_ in the published version!).
 
 Scheduler and Queues
 --------------------
@@ -39,7 +39,7 @@ User accounts are subject to storage quotas.
 
 Backups
 -------
-Backups of :file:/home will be performed infrequently. The :file:/data filesystem will not be backed up.
+Backups of :file:`/home` will be performed infrequently. The :file:`/data` filesystem will not be backed up.
  
 Software and Libraries
 ----------------------
