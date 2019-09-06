@@ -9,7 +9,7 @@
 About
 -----
 
-The NSF-funded lux supercomputer at UC Santa Cruz will enable computational research in astrophysics in galaxy formation, cosmological structure formation, exoplanet formation and atmospheres, astrophysical transients and gravitational wave sources, and convective and turbulent processes in stellar interiors. Broad computational research at UCSC in planetary science, applied mathematics, chemistry, and materials science will also be performed on the system.
+The NSF-funded *lux* supercomputer at UC Santa Cruz will enable computational research in astrophysics in galaxy formation, cosmological structure formation, exoplanet formation and atmospheres, astrophysical transients and gravitational wave sources, and convective and turbulent processes in stellar interiors. Broad computational research at UCSC in planetary science, applied mathematics, chemistry, and materials science will also be performed on the system.
 
 Submit comments or corrections to this documentation by `submitting an issue on GitHub <https://github.com/brantr/lux-website/issues>`_.
 
