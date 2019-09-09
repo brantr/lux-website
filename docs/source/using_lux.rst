@@ -159,24 +159,20 @@ We provide below an example slurm batch script::
     #SBATCH --job-name=mpi_job_test      # Job name
     #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
     #SBATCH --mail-user=[user]@ucsc.edu  # Where to send mail	
-    #SBATCH --ntasks=24                  # Number of MPI ranks
-    #SBATCH --cpus-per-task=1            # Number of cores per MPI rank 
+    #SBATCH --ntasks=80                  # Number of MPI ranks
     #SBATCH --nodes=2                    # Number of nodes
-    #SBATCH --ntasks-per-node=12         # How many tasks on each node
-    #SBATCH --ntasks-per-socket=6        # How many tasks on each CPU or socket
-    #SBATCH --distribution=cyclic:cyclic # Distribute tasks cyclically on nodes and sockets
-    #SBATCH --mem-per-cpu=600mb          # Memory per processor
+    #SBATCH --ntasks-per-node=40         # How many tasks on each node
     #SBATCH --time=00:05:00              # Time limit hrs:min:sec
     #SBATCH --output=mpi_test_%j.log     # Standard output and error log
 
 
     pwd; hostname; date
 
-    echo "Running prime number generator program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS tasks, each with $SLURM_CPUS_PER_TASK cores."
+    echo "Running program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS tasks, each with $SLURM_CPUS_PER_TASK cores."
 
-    module load intel/2018.1.163 openmpi/3.0.0
+    module load openmpi
 
-    srun --mpi=pmix_v1 /ufrc/data/training/SLURM/prime/prime_mpi
+    srun ./mpi_program
 
     date
 
@@ -207,9 +203,16 @@ Interactive Sessions
 
 To create an interactive session on a compute node, from a login node execute the following command::
 
-	$ srun -N 1 --partition=[queue name]  --pty bash -i
+	$ srun -N [Num of nodes] --partition=[queue name]  --pty bash -i
 
-Substitute the name of the queue you wish to use for :file:`[queue name]`. This will create a :file:`bash` shell in an interactive session on a single node (:file:`-N 1`). 
+Substitute the name of the queue you wish to use for :file:`[queue name]`. This will create a :file:`bash` shell in an interactive session on [Num of nodes] nodes (:file:`-N [Num of nodes]`). 
+
+Here is an example of combining srun + mpirun to run 3610 mpi processes interactively on 79 nodes::
+
+    $ srun -N 79 -n 3160 --partition=defq --pty bash -i
+    $ mpirun -n 3160 --map-by ppr:40:node ./mpi_test
+
+
 
 To allocate a multi-node interactive session, use the :file:`salloc` command::
 
