@@ -153,26 +153,25 @@ Substitute the name of the queue you wish to use for :file:`[queue name]`. This 
 Example Batch Script
 --------------------
 
-We provide below an example slurm batch script::
+We provide below an example slurm batch script, which executes an mpi job with 80 mpi processes distributed across 2 nodes, with 40 mpi processes per node (e.g., one per core)::
 
     #!/bin/bash
     #SBATCH --job-name=mpi_job_test      # Job name
     #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
-    #SBATCH --mail-user=[user]@ucsc.edu  # Where to send mail	
+    #SBATCH --mail-user=brant@ucsc.edu   # Where to send mail
     #SBATCH --ntasks=80                  # Number of MPI ranks
     #SBATCH --nodes=2                    # Number of nodes
     #SBATCH --ntasks-per-node=40         # How many tasks on each node
     #SBATCH --time=00:05:00              # Time limit hrs:min:sec
     #SBATCH --output=mpi_test_%j.log     # Standard output and error log
 
-
     pwd; hostname; date
 
-    echo "Running program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS tasks, each with $SLURM_CPUS_PER_TASK cores."
+    echo "Running program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS total tasks, with each node getting $SLURM_NTASKS_PER_NODE running on cores."
 
     module load openmpi
-
-    srun ./mpi_program
+    
+    mpirun -N 2 --map-by ppr:40:node ./mpi_test
 
     date
 
