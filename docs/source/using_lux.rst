@@ -33,12 +33,12 @@ Software Stack
 The primary software stack for *lux* currently consists of 
 
 	* :file:`gcc 4.8.5` for GNU compilers, including C, C++, and Fortran.
-	* :file:`icc 4.8.5` for Intel compilers, including C, C++, Fortran, and Intel MPI.
+	* :file:`icc 19.0.4.243` for Intel compilers, including C, C++, Fortran, and Intel MPI.
 	* :file:`openmpi` for OpenMPI parallel compilers, based on :file:`gcc 4.8.5`.
 	* :file:`python 3.6.7` for Python and related libraries.
-	* :file:`slurm 10.1` for queueing and job submission.
+	* :file:`slurm 18.08.4` for queueing and job submission.
 
-Each of these elements of the software stack are either automatically loaded by default (:file:`gcc 4.8.5`, :file: `python 3.6.7`, and :file:`slurm 10.1`) or loadable as a :file:`module` (:file:`openmpi` and Intel :file:`icc/mpii*` compilers; See `Modules <modulefiles_>`_ below).
+Each of these elements of the software stack are either automatically loaded by default (:file:`gcc 4.8.5`, :file: `python 3.6.7`, and :file:`slurm 18.08.4`) or loadable as a :file:`module` (:file:`openmpi` and Intel :file:`icc/mpii*` compilers; See `Modules <modulefiles_>`_ below).
 
 .. _modulefiles:
 
@@ -59,7 +59,7 @@ To list all currently loaded modules, write::
 
    $ module list
 
-By default, only :file:`slurm` and :file:`python/3.7` are loaded, along with the metapackage :file:`shared` that gives access to shared software modules installed in :file:`/cm/shared`. The default is set in your :file:`~/.bashrc` file and can be changed by altering the file. Note that :file:`slurm` is required
+By default, only :file:`slurm` and :file:`python/3.6.7` are loaded, along with the metapackage :file:`shared` that gives access to shared software modules installed in :file:`/cm/shared`. The default is set in your :file:`~/.bashrc` file and can be changed by altering the file. Note that :file:`slurm` is required
 to run jobs on the system.
 
 To remove a single module, simply type::
