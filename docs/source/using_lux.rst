@@ -135,7 +135,11 @@ Detailed information about the queues can be retrieved using :file:`scontrol sho
 
     $ scontrol show partition
 
+To cancel a job::
 
+    $ scancel [JOBID]
+
+where [JOBID] is the job you wish to cancel.
 
 .. _slurm_batch:
 
@@ -206,7 +210,7 @@ To create an interactive session on a compute node, from a login node execute th
 
 Substitute the name of the queue you wish to use for :file:`[queue name]`. This will create a :file:`bash` shell in an interactive session on [Num of nodes] nodes (:file:`-N [Num of nodes]`). 
 
-Here is an example of combining srun + mpirun to run 3610 mpi processes interactively on 79 nodes::
+Here is an example of combining srun + mpirun to run 3610 mpi processes interactively on 79 nodes using openmpi::
 
     $ srun -N 79 -n 3160 --partition=defq --pty bash -i
     $ mpirun -n 3160 --map-by ppr:40:node ./mpi_test
