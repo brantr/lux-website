@@ -23,7 +23,7 @@ Once you connect to *lux* (see `Connecting to lux <connecting_to_lux_>`_), you w
 one of three login nodes (*lux-0*, *lux-1*, *lux-2*). Connections are cyclically assigned
 across these nodes to distribute the user load, but for most purposes the nodes will function identically for the user.
 
-The user home directories are mounted at :file:`/home` across the system, as are the :file:`/data` directories. These global filesystems are imported from the DDN storage server via the HDR Infiniband network fabric, and support fast I/O from anywhere on the cluster. See `File System <file_system_>_` below
+The user home directories are mounted at :file:`/home` across the system, as are the :file:`/data` directories. These global filesystems are imported from the DDN storage server via the HDR Infiniband network fabric, and support fast I/O from anywhere on the cluster. See `File System <file_system_>`_ below
 
 .. _software_and_modules:
 
@@ -38,7 +38,7 @@ The primary software stack for *lux* currently consists of
 	* :file:`python 3.6.7` for Python and related libraries.
 	* :file:`slurm 18.08.4` for queueing and job submission.
 
-Each of these elements of the software stack are either automatically loaded by default (:file:`gcc 4.8.5`, :file: `python 3.6.7`, and :file:`slurm 18.08.4`) or loadable as a :file:`module` (:file:`openmpi` and Intel :file:`icc/mpii*` compilers; See `Modules <modulefiles_>`_ below).
+Each of these elements of the software stack are either automatically loaded by default (:file:`gcc 4.8.5`, :file:`python 3.6.7`, and :file:`slurm 18.08.4`) or loadable as a :file:`module` (:file:`openmpi` and Intel :file:`icc/mpii*` compilers; See `Modules <modulefiles_>`_ below).
 
 .. _modulefiles:
 
@@ -99,7 +99,7 @@ contact `Brant Robertson <email_brant_>`_ for access to :file:`/data`. In all ca
 Running Jobs
 ============
 
-The *lux* system uses `Slurm <https://slurm.schedmd.com/>` workload manager to schedule and execute jobs on the cluster nodes. If you are not familiar with Slurm don't worry, Slurm works like PBS, LSF, and other schedulers you may have used in the past. Below we provide information for running batch and interactive jobs on the *lux* nodes via Slurm.
+The *lux* system uses `Slurm <https://slurm.schedmd.com/>`_ workload manager to schedule and execute jobs on the cluster nodes. If you are not familiar with Slurm don't worry, Slurm works like PBS, LSF, and other schedulers you may have used in the past. Below we provide information for running batch and interactive jobs on the *lux* nodes via Slurm.
 
 .. _queues:
 
