@@ -225,6 +225,49 @@ To allocate a multi-node interactive session, use the :file:`salloc` command::
 
 This set of command allocates :file:`[ncores]` cores on the system and starts a shell :file:`sh`.  Then :file:`srun` command executes the job :file:`[executable]`, and :file:`exit` ends the session.
 
+.. _x_forwarding:
+
+X Forwarding
+--------------------
+
+Forwarding of X windows is enabled on the system. First, be sure you have connected to *lux* with X forwarding enabled::
+
+    $ ssh -Y [username]@lux.ucsc.edu
+
+Second, request an interactive shell with the :file:`--x11` flag enabled::
+
+    $ srun --x11 -N 1 --partition=defq --pty bash -i
+
+This should connect to a node in an interactive shell with x-forwarding enabled.  Then try opening a xterm::
+
+    $ xterm &
+
+With any luck, a few seconds later a remote xterm from the node should appear on your screen.
+
+.. _jupyter_notebooks:
+
+Jupyter Notebooks
+--------------------
+
+Yes, you can use Jupyter notebooks on the nodes! (Please do not use notebooks on the login nodes, those jobs will be terminated!) Here are some step-by-step instructions.
+
+First, connect to *lux* with x forwarding following the instructions `X Forwarding <x_forwarding_>`_ above. Before you request a node, load the following modules::
+
+    $ module load python/3.6.7
+    $ module load jupyter
+    $ module load numpy matplotlib [...]
+
+Afterward, request an interactive shell with x forwarding using the :file:`srun` command with the :file:`--x11` flag. Once you log into the node, do the following::
+
+    $ xterm &
+    $ chromium-browser &
+
+Once the xterm and the browser both appear on your remote desktop, *in the xterm* execute the following command::
+
+    $ jupyter-notebook
+
+This should redirect the browser window to a Jupyter instance. You'll have access in the Jupyter instance to any python modules you've loaded.
+
 .. _walkthrough:
 
 Tutorial Walkthrough
