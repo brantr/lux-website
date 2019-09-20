@@ -161,6 +161,7 @@ We provide below an example slurm batch script, which executes an mpi job with 8
 
     #!/bin/bash
     #SBATCH --job-name=mpi_job_test      # Job name
+    #SBATCH --partition=defq             # queue for job submission
     #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
     #SBATCH --mail-user=[USER ID]@ucsc.edu   # Where to send mail
     #SBATCH --ntasks=80                  # Number of MPI ranks
