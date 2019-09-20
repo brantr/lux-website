@@ -271,9 +271,39 @@ This should redirect the browser window to a Jupyter instance. You'll have acces
 
 .. _walkthrough:
 
-Tutorial Walkthrough
-====================
 
-Here we provide a walkthrough showing all the steps of connecting to *lux* and executing an interactive session via Slurm on a GPU node. We annotate the process to provide some useful information and references.
+Tensorflow
+--------------------
 
-COMING SOON!
+The *lux* system has GPU-enabled TensorFlow on the :file:`gpu` nodes.  To access the :file:`gpu` nodes in an interactive shell, just::
+
+    $ srun --x11 -N 1 --partition=gpuq --pty bash -i
+
+Then at the prompt load the required modules::
+
+    $ module load cuda10.0 libcudnn7/7.6 python/3.6.7 numpy/1.17.0 h5py/2.9.0 tensorflow-gpu/1.14.0
+
+Note the :file:`tensorflow-gpu` module is only available on the :file:`gpu` nodes.
+
+The following test script should execute successfully once the modules are loaded::
+
+    import tensorflow as tf
+    mnist = tf.keras.datasets.mnist
+    
+    (x_train, y_train),(x_test, y_test) = mnist.load_data()
+    x_train, x_test = x_train / 255.0, x_test / 255.0
+
+    model = tf.keras.models.Sequential([
+      tf.keras.layers.Flatten(input_shape=(28, 28)),
+      tf.keras.layers.Dense(512, activation=tf.nn.relu),
+      tf.keras.layers.Dropout(0.2),
+      tf.keras.layers.Dense(10, activation=tf.nn.softmax)
+    ])
+    model.compile(optimizer='adam',
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+
+    model.fit(x_train, y_train, epochs=5)
+    model.evaluate(x_test, y_test)
+
+If you have any difficulty running the test MNIST classification script, please let us know.
