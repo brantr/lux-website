@@ -57,7 +57,7 @@ Here are step-by-step instructions for connecting to *lux*:
 
   1) Request an authorized account, following the above `instructions <getting_an_account_>`_.
 
-  2) Connect to the UCSC Campus VPN using your CruzID and Gold password via the UCSC VPN client. Installation instructions for the VPN client are available on the ITS `website <https://its.ucsc.edu/vpn/installation.html>`_.
+  2) Connect to the UCSC Campus VPN using your CruzID and Gold password via the UCSC VPN client. Installation instructions for the VPN client are available on the ITS `website <https://its.ucsc.edu/vpn/installation.html>`_. If you have not reset your Gold password recently, you may need to do so in order to connect to the system (visit `cruzid.ucsc.edu <https://cruzid.ucsc.edu>`_)
 
   3) Connect to the *lux* system via Secure Shell::
 
