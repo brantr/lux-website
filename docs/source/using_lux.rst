@@ -307,3 +307,24 @@ The following test script should execute successfully once the modules are loade
     model.evaluate(x_test, y_test)
 
 If you have any difficulty running the test MNIST classification script, please let us know.
+
+.. _known_issues:
+
+Known Issues
+============
+
+Below, we list the known issues with the system. We are looking into them!  But if you encounter unusual behavior, please have a look here first (but please also let us know about it!).
+
+.. _authentication_issues:
+
+Authentication Issues
+----------------------
+
+If you recieve an error about "Permission denied" when accessing your /home directory, please let us know as it's related to the authentication scheme on the servers that host the /home and /data directories. We are looking into a permanent fix.
+
+.. _intel_mpi_issues:
+
+Intel MPI Issues
+----------------
+
+Currently, Intel MPI-compiled binaries will not run on more than 20-30 cores per node. We recommend using OpenMPI until this issue is resolved. If you encounter Intel MPI or Open MPI issues, please let us know.
