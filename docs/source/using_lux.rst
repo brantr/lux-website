@@ -152,9 +152,9 @@ To run a batch job across multiple nodes, from a login node execute the followin
 
 Substitute the name of the queue you wish to use for :file:`[queue name]`. This will submit a slurm batch script file :file:`[script name]` to the specified queue.
 
-.. _slurm_example:
+.. _slurm_openmpi_example:
 
-Example Batch Script
+Example Batch Script for OpenMPI
 --------------------
 
 We provide below an example slurm batch script, which executes an mpi job with 80 mpi processes distributed across 2 nodes, with 40 mpi processes per node (e.g., one per core)::
@@ -182,6 +182,16 @@ We provide below an example slurm batch script, which executes an mpi job with 8
 
 
 This example can be submitted to the queues following the instructions in `Batch Job Submission <slurm_batch_>`_ above. 
+
+.. _slurm_intel_example:
+
+Example Batch Script for Intel MPI
+--------------------
+
+UNDER CONSTRUCTION.
+
+
+This example can be submitted to the queues following the instructions in `Batch Job Submission <slurm_batch_>`_ above.
 
 .. _slurm_job_arrays:
 
