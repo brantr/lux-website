@@ -33,7 +33,7 @@ Software Stack
 The primary software stack for *lux* currently consists of 
 
 	* :file:`gcc 4.8.5` for GNU compilers, including C, C++, and Fortran.
-	* :file:`icc 19.0.4.243` for Intel compilers, including C, C++, Fortran, and Intel MPI.
+	* :file:`icc 19.0.5.281` for Intel compilers, including C, C++, Fortran, and Intel MPI.
 	* :file:`openmpi` for OpenMPI parallel compilers, based on :file:`gcc 4.8.5`.
 	* :file:`python 3.6.7` for Python and related libraries.
 	* :file:`slurm 18.08.4` for queueing and job submission.
@@ -188,7 +188,28 @@ This example can be submitted to the queues following the instructions in `Batch
 Example Batch Script for Intel MPI
 --------------------
 
-UNDER CONSTRUCTION.
+We provide below an example slurm batch script, which executes an mpi job with 80 mpi processes distributed across 2 nodes, with 40 mpi processes per node (e.g., one per core)::
+
+    #!/bin/bash
+    #SBATCH --job-name=mpi_job_test      # Job name
+    #SBATCH --partition=defq             # queue for job submission
+    #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
+    #SBATCH --mail-user=[USER ID]@ucsc.edu   # Where to send mail
+    #SBATCH --ntasks=80                  # Number of MPI ranks
+    #SBATCH --nodes=2                    # Number of nodes
+    #SBATCH --ntasks-per-node=40         # How many tasks on each node
+    #SBATCH --time=00:05:00              # Time limit hrs:min:sec
+    #SBATCH --output=mpi_test_%j.log     # Standard output and error log
+
+    pwd; hostname; date
+
+    echo "Running program on $SLURM_JOB_NUM_NODES nodes with $SLURM_NTASKS total tasks, with each node getting $SLURM_NTASKS_PER_NODE running on cores."
+
+    module load intel/impi
+    
+    mpirun -n 80 --ppn 40 ./mpi_test
+
+    date
 
 
 This example can be submitted to the queues following the instructions in `Batch Job Submission <slurm_batch_>`_ above.
