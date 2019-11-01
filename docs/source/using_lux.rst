@@ -82,17 +82,19 @@ that contains common software and modules.
 
 The filesystems on *lux* are subject to storage quotas. While there
 is substantial storage available on the system, some members of the
-*lux* project team and affiliated departments and divisions have directly purchased storage in support of research projects. Some limited free storage may be available by request (see below).
+*lux* project team and affiliated departments and divisions have directly purchased storage in support of research projects. Some limited free storage is available to users.
 
-Your :file:`/home/[user name]` directory will have a storage quota of *5 GB*.
+Your :file:`/home/[user name]` directory have a storage quota of *5 GB*.
+
+Your :file:`/data/users/[user name]` directory have a storage quota of *100 GB*.
+
 
 If you belong to a research group affiliated with a *lux* Co-I, you may have access to a :file:`/data/[research group]` directory
 with significant storage. While these directories have storage
 quotas, they should be sufficient for most research group needs. If you have questions about accessing the your research group's
 :file:`/data` directories, please contact your affiliated Co-I.
 
-For users who are not affiliated with a research group, please
-contact `Brant Robertson <email_brant_>`_ for access to :file:`/data`. In all cases, :file:`/data` storage will be limited.
+d.
 
 .. _running_jobs:
 
