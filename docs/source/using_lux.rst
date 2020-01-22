@@ -103,6 +103,13 @@ Running Jobs
 
 The *lux* system uses `Slurm <https://slurm.schedmd.com/>`_ workload manager to schedule and execute jobs on the cluster nodes. If you are not familiar with Slurm don't worry, Slurm works like PBS, LSF, and other schedulers you may have used in the past. Below we provide information for running batch and interactive jobs on the *lux* nodes via Slurm.
 
+.. _slurm_cheatsheet:
+
+Slurm Cheat Sheet
+-----------------
+
+There is a great slurm command `cheat sheet <https://slurm.schedmd.com/pdfs/summary.pdf>`_  available!
+
 .. _queues:
 
 Queues
