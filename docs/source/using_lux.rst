@@ -117,20 +117,21 @@ Queues
 
 The *lux* system has a variety of job queues (called *partitions* in Slurm parlance) available for users. The currently available queues include:
 
-* **defq** The default queue, submits to *node[001-080]*.
-* **gpuq** The GPU-enabled node queue, submits to *gpu[001-028]*.
+* **windfall** The default queue, submits to *node[001-080]* and *gpu[001-028]*. The windfall queue has no per user or time limitations, but can be pre-empted by all other queues. 
+* **defq** The CPU-only queue, submits to *node[001-080]*, available to lux collaboration members. Will pre-empt windfall, limited to 24 hours / 16 nodes.
+* **gpuq** The GPU-enabled node queue, submits to *gpu[001-028]*, available to lux collaboration members. Will pre-empt windfall, limited to 24 hours / 16 nodes.
 
-In the following, please substitute on of these queues when instructed to specify the :file:`[queue name]`.
+There are also queues for individual research groups with a limited number of nodes available at the highest priority, pre-empting jobs in the windfall, defq, and gpuq paritions.
+
+In the following, please substitute one of these queues when instructed to specify the :file:`[queue name]`.
 
 To get information on the status of the queues, use the :file:`sinfo` command::
 
     $ sinfo
 
     PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
-    defq*        up   infinite     80  idle node[001-080]
-    gpuq         up   infinite     28  idle gpu[001-028]
-
-
+    windfall*    up   infinite     80  idle node[001-080]
+	windfall*    up   infinite     28  idle gpu[001-028]
 
 This shows the queue names (PARTITION), their availability (AVAIL), any time limit (TIMELIMIT), the state of nodes (STATE), the number of nodes in that state (NODES), and the list of nodes in that state (NODELIST).
 
