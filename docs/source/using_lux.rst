@@ -158,20 +158,21 @@ Batch Job Submission
 
 To run a batch job across multiple nodes, from a login node execute the following command::
 
-	$ sbatch --partition=[queue name] [script name]
+	$ sbatch --partition=[queue name] --account=[queue name] [script name]
 
-Substitute the name of the queue you wish to use for :file:`[queue name]`. This will submit a slurm batch script file :file:`[script name]` to the specified queue.
+Substitute the name of the queue you wish to use for :file:`[queue name]`. This will submit a slurm batch script file :file:`[script name]` to the specified queue. Both :file:'--partition=[queue name]' and :file:'--account=[queue name]' must be specified.
 
 .. _slurm_openmpi_example:
 
 Example Batch Script for OpenMPI
 --------------------------------
 
-We provide below an example slurm batch script, which executes an mpi job with 80 mpi processes distributed across 2 nodes, with 40 mpi processes per node (e.g., one per core)::
+We provide below an example slurm batch script, which executes an mpi job with 80 mpi processes distributed across 2 nodes, with 40 mpi processes per node (e.g., one per core) to the :file:cpu queue ::
 
     #!/bin/bash
     #SBATCH --job-name=mpi_job_test      # Job name
-    #SBATCH --partition=defq             # queue for job submission
+    #SBATCH --partition=cpuq             # queue for job submission
+    #SBATCH --account=cpuq               # queue for job submission
     #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
     #SBATCH --mail-user=[USER ID]@ucsc.edu   # Where to send mail
     #SBATCH --ntasks=80                  # Number of MPI ranks
@@ -202,7 +203,8 @@ We provide below an example slurm batch script, which executes an mpi job with 8
 
     #!/bin/bash
     #SBATCH --job-name=mpi_job_test      # Job name
-    #SBATCH --partition=defq             # queue for job submission
+    #SBATCH --partition=cpuq             # queue for job submission
+    #SBATCH --account=cpuq               # queue for job submission
     #SBATCH --mail-type=END,FAIL         # Mail events (NONE, BEGIN, END, FAIL, ALL)
     #SBATCH --mail-user=[USER ID]@ucsc.edu   # Where to send mail
     #SBATCH --ntasks=80                  # Number of MPI ranks
@@ -248,13 +250,13 @@ Interactive Sessions
 
 To create an interactive session on a compute node, from a login node execute the following command::
 
-	$ srun -N [Num of nodes] --partition=[queue name]  --pty bash -i
+	$ srun -N [Num of nodes] --partition=[queue name] --account=[queue name]  --pty bash -i
 
 Substitute the name of the queue you wish to use for :file:`[queue name]`. This will create a :file:`bash` shell in an interactive session on [Num of nodes] nodes (:file:`-N [Num of nodes]`). 
 
 Here is an example of combining srun + mpirun to run 3610 mpi processes interactively on 79 nodes using openmpi::
 
-    $ srun -N 79 -n 3160 --partition=defq --pty bash -i
+    $ srun -N 79 -n 3160 --partition=cpuq --account=cpuq --pty bash -i
     $ mpirun -n 3160 --map-by ppr:40:node ./mpi_test
 
 
@@ -278,7 +280,7 @@ Forwarding of X windows is enabled on the system. First, be sure you have connec
 
 Second, request an interactive shell with the :file:`--x11` flag enabled::
 
-    $ srun --x11 -N 1 --partition=defq --pty bash -i
+    $ srun --x11 -N 1 --partition=cpuq --account=cpuq --pty bash -i
 
 This should connect to a node in an interactive shell with x-forwarding enabled.  Then try opening a xterm::
 
@@ -318,7 +320,7 @@ Tensorflow
 
 The *lux* system has GPU-enabled TensorFlow on the :file:`gpu` nodes.  To access the :file:`gpu` nodes in an interactive shell, just::
 
-    $ srun --x11 -N 1 --partition=gpuq --pty bash -i
+    $ srun --x11 -N 1 --partition=gpuq --account=gpuq --pty bash -i
 
 Then at the prompt load the required modules::
 
