@@ -24,6 +24,7 @@ Submit comments or corrections to this documentation by `submitting an issue on 
    coi_info.rst
    policies.rst
    project.rst
+   dedalus.rst
 
 
 
