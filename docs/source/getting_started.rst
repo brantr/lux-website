@@ -57,12 +57,12 @@ Here are step-by-step instructions for connecting to *lux*:
 
   1) Request an authorized account, following the above `instructions <getting_an_account_>`_.
 
-  2) Connect to the UCSC Campus VPN using your CruzID and Gold password via the UCSC VPN client. Installation instructions for the VPN client are available on the ITS `website <https://its.ucsc.edu/vpn/installation.html>`_. If you have not reset your Gold password recently, you may need to do so in order to connect to the system (visit `cruzid.ucsc.edu <https://cruzid.ucsc.edu>`_)
+  2) Connect to the UCSC Campus VPN using your CruzID and Gold password via the UCSC VPN client. Installation instructions for the VPN client are available on the ITS `website <https://its.ucsc.edu/vpn/installation.html>`_. If you have not reset your Gold password recently, you may need to do so in order to connect to the system (visit `cruzid.ucsc.edu <https://cruzid.ucsc.edu>`_). You will need to enroll a device in Duo for Multifactor Authentication to connect to the VPN.
 
   3) Connect to the *lux* system via Secure Shell::
 
       $ ssh [cruzid]@lux.ucsc.edu
 
-    Where [cruzid] is your CruzID. When prompted, provide your Gold password. You will be directed to one of the three login nodes (*lux-0*, *lux-1*, or *lux-2*) where you can submit jobs to the system queues.
+    Where [cruzid] is your CruzID. When prompted, provide your Gold password and select a Duo MFA method. You will be directed to one of the three login nodes (*lux-0*, *lux-1*, or *lux-2*) where you can submit jobs to the system queues.
 
   4) See `Using lux <using_lux_>`_ for further instructions.
