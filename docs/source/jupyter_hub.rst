@@ -23,7 +23,13 @@ Once you have connected, you will see a Launcher window that contains a variety 
 *windfall*, *cpuq*, and *gpuq* partitions, each of the
 *lux* group partitions have kernels available. You will
 need to have membership in the corresponding partition to
-run a Jupyter notebook.
+run a Jupyter notebook. Jupyter notebooks running
+on the *windfall* partition are limited to a single core
+and 4GB of memory, with the individual nodes potentially
+shared between multiple users. The *cpuq*, *gpuq* and
+group partitions have exclusive access when running
+Jupyter notebooks.
+
 
 Once you have completed using the notebook via the kernel
 you select, please be sure to shut down the kernel before
