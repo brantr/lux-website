@@ -44,3 +44,7 @@ by the Bright Cluster Management software. If you have
 a module that needs to be installed for use with 
 Python 3.7, please use the *help* channel on the
 *lux* Slack workspace.
+
+Do Not Autoload Python
+--------------------------
+If you plan to use notebooks via the *lux* Jupyter hub, please be sure that you are not auto-loading the module for python/3.8.6  within your .bashrc, .bash_profile or .profile. The notebook’s python kernel depends on the cm_local module python37, and your notebook will fail if you already have python/3.8.6 loaded in user environment. You can still module load python/3.8.6 within your sbatch scripts to use the later 3.8.6 version of python in your slurm workflows.
