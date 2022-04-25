@@ -48,3 +48,8 @@ Python 3.7, please use the *help* channel on the
 Do Not Autoload Python
 --------------------------
 If you plan to use notebooks via the *lux* Jupyter hub, please be sure that you are not auto-loading the module for python/3.8.6  within your .bashrc, .bash_profile or .profile. The notebook’s python kernel depends on the cm_local module python37, and your notebook will fail if you already have python/3.8.6 loaded in user environment. You can still module load python/3.8.6 within your sbatch scripts to use the later 3.8.6 version of python in your slurm workflows.
+
+Known Issues
+--------------------------
+1. The terminal under the Jupyter Hub does have access to groups associated with the University credential system. So do not submit jobs from the terminal within Jupyter.
+2. If a queue is full (using all its available resources) and a user requests a node using Jupyter for that queue, the notebook will fail and then quitting the notebook will not  cancel the slurm job. You can use :file:'scancel' from a termal connected directly to *lux* to cancel the job.
